@@ -2,6 +2,7 @@ package com.example.zuoye2.net;
 
 import java.util.HashMap;
 
+//第三次
 public interface WorkInterface {
     <T> void get(String url, Callback<T> callback);
     <T> void post(String url, Callback<T> callback);

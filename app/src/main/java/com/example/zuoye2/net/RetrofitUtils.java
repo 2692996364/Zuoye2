@@ -20,6 +20,7 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+//第三次
 public class RetrofitUtils implements WorkInterface {
     private static RetrofitUtils retrofitUtils;
     private final ApiService apiService;
