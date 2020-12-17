@@ -1,0 +1,35 @@
+package com.example.zuoye2.presenter;
+
+import com.example.zuoye2.base.BasePresenter;
+import com.example.zuoye2.bean.UserBean;
+import com.example.zuoye2.contract.MainContract;
+import com.example.zuoye2.model.MainModel;
+import com.example.zuoye2.net.Callback;
+
+public class MainPresenter extends BasePresenter<MainContract.IMainView> implements MainContract.IMainPresenter {
+    private MainContract.IMainModel mainModel;
+
+    public MainPresenter(MainContract.IMainView mainView) {
+        this.mainModel = new MainModel(this);
+    }
+
+    @Override
+    public void login(String name, String password) {
+
+    }
+
+    @Override
+    public void loginResult(String result) {
+        mainModel.getLoginData(result, new Callback<UserBean>() {
+            @Override
+            public void onSuccess(UserBean userBean) {
+                iView.getLoginData(userBean);
+            }
+
+            @Override
+            public void onFail(String msg) {
+
+            }
+        });
+    }
+}
