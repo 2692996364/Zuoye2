@@ -10,12 +10,13 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
     public P presenter;
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
 
         if (presenter == null) {
             presenter = add();
+            presenter.attachView(this);
         }
 
         initView();
