@@ -1,13 +1,10 @@
 package com.example.zuoye2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.example.zuoye2.api.URLConstant;
-import com.example.zuoye2.base.BaseActivity;
+import com.example.mvplibrary.base.BaseActivity;
+import com.example.mvplibrary.utils.net.URLConstant;
 import com.example.zuoye2.bean.UserBean;
 import com.example.zuoye2.contract.MainContract;
 import com.example.zuoye2.presenter.MainPresenter;
@@ -33,7 +30,7 @@ public class HomeActivity extends BaseActivity<MainPresenter> implements MainCon
 
     @Override
     public MainPresenter add() {
-        return new MainPresenter(this);
+        return new MainPresenter();
     }
 
     @Override

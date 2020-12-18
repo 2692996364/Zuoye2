@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.zuoye2.base.BaseActivity;
+import com.example.mvplibrary.base.BaseActivity;
 import com.example.zuoye2.bean.UserBean;
 import com.example.zuoye2.contract.MainContract;
 import com.example.zuoye2.presenter.MainPresenter;
@@ -43,7 +43,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
     @Override
     public MainPresenter add() {
-        return new MainPresenter(this);
+        return new MainPresenter();
     }
 
     @Override

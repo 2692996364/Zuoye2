@@ -1,4 +1,4 @@
-package com.example.zuoye2.api;
+package com.example.mvplibrary.utils.net;
 
 public class URLConstant {
     public static String BASE_URL = "http://cdwan.cn:7000/";

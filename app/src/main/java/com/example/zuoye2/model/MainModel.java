@@ -1,8 +1,8 @@
 package com.example.zuoye2.model;
 
+import com.example.mvplibrary.utils.net.Callback;
+import com.example.mvplibrary.utils.net.RetrofitUtils;
 import com.example.zuoye2.contract.MainContract;
-import com.example.zuoye2.net.Callback;
-import com.example.zuoye2.net.RetrofitUtils;
 
 public class MainModel implements MainContract.IMainModel {
     private MainContract.IMainPresenter presenter;

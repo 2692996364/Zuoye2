@@ -1,4 +1,4 @@
-package com.example.zuoye2.net;
+package com.example.mvplibrary.utils.net;
 
 public interface Callback<T> {
     void onSuccess(T t);

@@ -1,7 +1,7 @@
-package com.example.zuoye2.net;
+package com.example.mvplibrary.utils.net;
 
-import com.example.zuoye2.api.ApiService;
-import com.example.zuoye2.api.URLConstant;
+import androidx.annotation.NonNull;
+
 import com.google.gson.Gson;
 
 import java.io.IOException;
@@ -11,7 +11,6 @@ import java.util.HashMap;
 
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.OkHttpClient;
@@ -19,6 +18,7 @@ import okhttp3.ResponseBody;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
+
 
 //第三次
 public class RetrofitUtils implements WorkInterface {

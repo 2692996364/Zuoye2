@@ -1,7 +1,6 @@
-package com.example.zuoye2.base;
+package com.example.mvplibrary.base;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,4 +29,13 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
     protected abstract int getLayoutId();
 
     public abstract P add();
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        //解绑MVP
+        if (presenter != null) {
+            presenter.detachView();
+        }
+    }
 }
